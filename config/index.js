@@ -45,12 +45,17 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../docs/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '',
+    productionSourceMap: true,
+    devtool:'#source-map',
+    productionGzip: false,
+    productionGzipExtensions: ['js','css'],
+    bundleAnalyzerReport:process.env.npm_config_report,
 
     /**
      * Source Maps
