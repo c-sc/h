@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Header/>
+    <Main/>
   </div>
 </template>
 
 <script>
-import Header from './components/Header';
+import Main from './components/Main';
 
 export default {
   name: 'App',
   components: {
-    Header,
+    Main,
   },
 };
 </script>
@@ -25,5 +25,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+#topright {
+  margin-top: 11px;
+  float: right;
+  vertical-align: center;
+}
+.lbtn {
+  margin-left: 8px;
 }
 </style>
