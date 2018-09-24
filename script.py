@@ -76,13 +76,13 @@ messenger.table("posts",sess.alice)
 
 node.info()
 
-print("Alice")
+print("alice")
 print(sess.alice.active_key)
 
-print("Carol")
+print("carol")
 print(sess.carol.active_key)
 
-print("Bob")
+print("bob")
 print(sess.bob.active_key)
 
 

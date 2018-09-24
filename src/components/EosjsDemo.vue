@@ -10,18 +10,27 @@
     <h4>chainId:</h4>
     <input v-model="econfig['chainId']" type="text"><br><br><br>
     <button @click="getBalances()" >Get balances</button><br><br>
-    <label>Alice balance:</label>
+    <label>alice balance:</label>
     <label ref="aliceMoney"></label><br>
-    <label>Alice private active key: </label><br>
-    <input ref="ypkey" type="text"><br><br>
-    <label>Carol balance: </label>
-    <label ref="carolMoney"></label><br>
-    <label>Carol private active key: </label><br>
-    <input type="text"><br><br>
-    <label>Bob balance: </label>
-    <label ref="bobMoney"></label><br>
-    <label>Bob private active key: </label><br>
+    <label>alice private active key: </label><br>
     <input type="text"><br>
+    <label>Transfer</label><br>
+    <label>To: </label><input type="text">
+    <button @click="lscatter()" >Send</button><br><br>
+    <label>carol balance: </label>
+    <label ref="carolMoney"></label><br>
+    <label>carol private active key: </label><br>
+    <input type="text"><br>
+    <label>Transfer</label><br>
+    <label>To: </label><input type="text">
+    <button @click="lscatter()" >Send</button><br><br>
+    <label>bob balance: </label>
+    <label ref="bobMoney"></label><br>
+    <label>bob private active key: </label><br>
+    <input type="text"><br>
+    <label>Transfer</label><br>
+    <label>To: </label><input type="text">
+    <button @click="lscatter()" >Send</button><br><br>
   </div>
 </template>
 
@@ -110,7 +119,7 @@ export default {
             this.token.scope = '';
             this.error.bob = errorB;
             this.bob.balance = rowsB.rows[0].balance;
-            this.balvis = true;
+            this.balvis = !this.balvis;
           });
         });
       });

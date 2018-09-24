@@ -1,9 +1,9 @@
 <template><div><div id="header" ><div  class="container">
 <img id="logo" src="https://github.com/gitgyver/test/blob/master/codescape2.png?raw=true">
 <div id="topright">
-  <a href="https://github.com/gitgyver">
+  <a href="https://github.com/c-sc">
   <button type="button" class="btn btn-primary btn-light lbtn">
-  <img id="logo" src="http://icons.iconarchive.com/icons/artcore-illustrations/artcore-4/24/github-icon.png">Github
+  <img id="logo" src="http://icons.iconarchive.com/icons/artcore-illustrations/artcore-4/16/github-icon.png">Github
   </button>
   </a>
   <button @click="mc = 'Showcase'" type="button" class="btn btn-primary btn-light lbtn">
@@ -51,12 +51,14 @@ export default {
   float: left;
 }
 #topright {
-  margin-top: 11px;
+  margin-top: 17px;
   float: right;
   vertical-align: center;
 }
 .lbtn {
-  margin-left: 8px;
+  margin-left: 1px;
+  padding: 0px;
+  font-size: 15px;
 }
 .container {
   margin: 0 auto;
