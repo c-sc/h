@@ -107,6 +107,7 @@ export default {
 
           this.token.scope = 'bob';
           this.eos.getTableRows(this.token, (errorB, rowsB) => {
+            this.token.scope = '';
             this.error.bob = errorB;
             this.bob.balance = rowsB.rows[0].balance;
             this.balvis = true;
